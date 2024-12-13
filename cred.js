@@ -29,7 +29,17 @@ element.appendChild(watermark);
 var tanggal = document.createElement("div");
 // Setel teks tanggal dan propertinya
 tanggal.textContent = hours + "." + minutes + " WIB - " + day + ", " + dateNum + " " + month + " " + year;
-tanggal.style = "color:white;opacity:.5;font-size:10px;position:fixed;bottom:25px;right:25px;z-index:150";
+tanggal.style = `
+  color: white;
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 10px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 150;
+`;
 element.appendChild(tanggal);
 
 //////////////////////////////////////////////////
