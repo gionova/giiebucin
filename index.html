@@ -15,12 +15,12 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 
 <head>
-    <title>Buat namaorangnya</title>
+    <title>HTML Bucin</title>
     <link rel="icon" type="image/x-icon" href="https://malasid.github.io/favicon.png">
     <meta name="description" content="HTML Bucin Malas.id">
 </head>
 <body>
-    <div class="overlay">
+    <div class="overlay" id="overlay">
         <div class="loading-message">Hai <span id="nama-orang"></span>!<br>Tunggu dulu ya..</div>
     </div>
 
@@ -80,14 +80,21 @@
             el.textContent = nama;
         });
 
+        // Hilangkan overlay setelah 2 detik
+        window.onload = () => {
+            setTimeout(() => {
+                document.getElementById('overlay').style.display = 'none';
+            }, 2000);
+        };
+
         function fungsimau() {
-            fungsi = 0; tes();
+            fungsi = 0;
             teksjudulakhir = "Yeayyy! 🥳";
             tekskalimatakhir = `Makasii ${nama} udah mau nerima<br>aku jadi pacar kamu, hihi 🤭❤️`;
         }
 
         function fungsigamau() {
-            fungsi = 0; tes();
+            fungsi = 0;
             teksjudulakhir = "Yahhh 😫";
             tekskalimatakhir = `Yaudah kalo kamu gamau,<br>biar aku aja yang jadi<br>pacar kamu, hehe 😆❤️`;
         }
