@@ -18,7 +18,7 @@
 <head>
     <title>Buat namaorangnya</title>
     <link rel="icon" type="image/x-icon" href="https://malasid.github.io/favicon.png">
-    <meta name="description" content="HTML Bucin by:giie">
+    <meta name="description" content="HTML Bucin Malas.id">
 </head>
 <body>
     <div class="overlay">
@@ -82,17 +82,17 @@
 <script>
 // Ambil nama dari parameter URL
 const urlParams = new URLSearchParams(window.location.search);
-const for = urlParams.get('for') || "namaorangnya"; // Default nama jika tidak ada parameter
+const nama = urlParams.get('for') || "namaorangnya"; // Default nama jika tidak ada parameter
 
 // Ganti semua elemen dengan id terkait nama
 document.querySelectorAll('#namaorangnya').forEach(el => {
-    el.textContent = for;
+    el.textContent = nama;
 });
 
 function fungsimau(){
     fungsi=0;tes();
     teksjudulakhir = "Yeayyy! 🥳";
-    tekskalimatakhir = `Makasii ${for} udah mau nerima<br>aku jadi pacar kamu, hihi 🤭❤️`;
+    tekskalimatakhir = `Makasii ${nama} udah mau nerima<br>aku jadi pacar kamu, hihi 🤭❤️`;
 }
 
 function fungsigamau(){
@@ -101,7 +101,7 @@ function fungsigamau(){
     tekskalimatakhir = `Yaudah kalo kamu gamau,<br>biar aku aja yang jadi<br>pacar kamu, hehe 😆❤️`;
 }
 
-teksjudulakhir2 = "I Love You "+for;
+teksjudulakhir2 = "I Love You "+nama;
 tekspalingakhir = "Jangan lupa balas pesan<br>ke WhatsApp aku ya! ✨";
 
 pesanwhatsapp = "Aku mau kok jadi pacar kamu ><";
