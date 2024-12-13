@@ -20,7 +20,7 @@
     <meta name="description" content="HTML Bucin Malas.id">
 </head>
 <body>
-    <div class="overlay">
+    <div class="overlay" id="overlay">
         <div class="loading-message">Hai <span id="nama-orang"></span>!<br>Tunggu dulu ya..</div>
     </div>
 
@@ -75,10 +75,13 @@
         const urlParams = new URLSearchParams(window.location.search);
         const nama = urlParams.get('nama') || "namaorangnya"; // Default nama jika tidak ada parameter
 
-        // Ganti semua elemen dengan id terkait nama
+        // Masukkan nama ke elemen-elemen yang sesuai
         document.querySelectorAll('#nama-orang, #nama-hei, #nama-suka, #nama-tanya, #nama-tanya2, #nama-nyaman, #nama-ajakan').forEach(el => {
             el.textContent = nama;
         });
+
+        // Hilangkan overlay setelah beberapa detik
+        document.getElementById('overlay').style.display = "none";
 
         function fungsimau() {
             fungsi = 0; tes();
